@@ -2891,10 +2891,10 @@ scroll-view.cu-steps .cu-item {
 
 /* grid布局 */
 
-.grid {
+/* .grid {
 	display: flex;
 	flex-wrap: wrap;
-}
+} */
 
 .grid.grid-square {
 	overflow: hidden;
