@@ -25,5 +25,5 @@ function checkLogin() {
 </script>
 
 <style lang="scss">
-@use '@/static/scss/index.scss';
+@import '@/static/scss/index.scss';
 </style>

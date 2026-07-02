@@ -57,7 +57,8 @@
     "@tdesign/uniapp": "^0.10.1",
     "pinia": "^3.0.4",
     "vue": "3.5.38",
-    "vue-i18n": "9.14.4"
+    "vue-i18n": "9.14.4",
+    "z-paging": "^2.8.8"
   },
   "devDependencies": {
     "@dcloudio/types": "3.4.31",

@@ -23,6 +23,7 @@ export default defineConfig(({ command, mode }) => {
         }
       }
     },
+    transpileDependencies: ['z-paging'],
     server: {
       proxy: {
         [env.VITE_PROXY_PREFIX]: {
