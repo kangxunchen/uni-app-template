@@ -69,6 +69,7 @@
     "@uni-helper/unocss-preset-uni": "^0.2.11",
     "@unocss/preset-legacy-compat": "^66.7.2",
     "@vue/runtime-core": "3.5.38",
+    "less": "^4.6.7",
     "sass": "^1.77.8",
     "unocss": "^66.7.2",
     "unocss-applet": "^0.12.2",
