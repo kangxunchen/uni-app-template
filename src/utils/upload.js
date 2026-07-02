@@ -1,11 +1,10 @@
 import { useUserStore } from '@/store'
-import config from '@/config'
+import { baseUrl } from '@/config'
 import { getToken } from '@/utils/auth'
 import errorCode from '@/utils/errorCode'
 import { toast, showConfirm, tansParams } from '@/utils/common'
 
 let timeout = 10000
-const baseUrl = config.baseUrl
 
 export default function upload(config) {
   // 是否需要设置 token
@@ -28,18 +27,20 @@ export default function upload(config) {
       name: config.name || 'file',
       header: config.header,
       formData: config.formData,
-      success: (res) => {
+      success: res => {
         let result = JSON.parse(res.data)
         const code = result.code || 200
         const msg = errorCode[code] || result.msg || errorCode['default']
         if (code === 200) {
           resolve(result)
         } else if (code == 401) {
-          showConfirm("登录状态已过期，您可以继续留在该页面，或者重新登录?").then(res => {
+          showConfirm('登录状态已过期，您可以继续留在该页面，或者重新登录?').then(res => {
             if (res.confirm) {
-              useUserStore().logOut().then(res => {
-                uni.reLaunch({ url: '/pages/login/login' })
-              })
+              useUserStore()
+                .logOut()
+                .then(res => {
+                  uni.reLaunch({ url: '/pages/login/login' })
+                })
             }
           })
           reject('无效的会话，或者会话已过期，请重新登录。')
@@ -51,7 +52,7 @@ export default function upload(config) {
           reject(code)
         }
       },
-      fail: (error) => {
+      fail: error => {
         let { message } = error
         if (message == 'Network Error') {
           message = '后端接口连接异常'
@@ -66,5 +67,3 @@ export default function upload(config) {
     })
   })
 }
-
-

@@ -43,10 +43,10 @@
   import { onLoad } from  "@dcloudio/uni-app"
   import { getToken } from '@/utils/auth'
   import { getCodeImg } from '@/api/login'
-  import { useConfigStore, useUserStore } from '@/store'
+  import { useUserStore } from '@/store'
+  import globalConfig from '@/config'
 
   const { proxy } = getCurrentInstance()
-  const globalConfig = useConfigStore().config
   const codeUrl = ref("")
   // 验证码开关
   const captchaEnabled = ref(true)

@@ -44,10 +44,10 @@
 </template>
 
 <script setup>
-  import { useConfigStore } from '@/store'
+  import config from '@/config'
 
-  const url = useConfigStore().config.appInfo.site_url
-  const version = useConfigStore().config.appInfo.version
+  const url = config.appInfo.site_url
+  const version = config.appInfo.version
 </script>
 
 <style lang="scss" scoped>

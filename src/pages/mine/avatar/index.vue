@@ -37,11 +37,9 @@
 </template>
 
 <script>
-  import config from '@/config'
+  import { baseUrl } from '@/config'
   import { useUserStore } from '@/store'
   import { uploadAvatar } from "@/api/system/user"
-  
-  const baseUrl = config.baseUrl
 	let sysInfo = uni.getSystemInfoSync()
 	let SCREEN_WIDTH = sysInfo.screenWidth
 	let PAGE_X, // 手按下的x位置

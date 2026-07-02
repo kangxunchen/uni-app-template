@@ -5,6 +5,7 @@ import { install } from './plugins' // plugins
 import './permission' // permission
 import { useDict } from '@/utils/dict'
 import 'virtual:uno.css'
+import '@tdesign/uniapp/theme.less'
 
 export function createApp() {
   const app = createSSRApp(App)
