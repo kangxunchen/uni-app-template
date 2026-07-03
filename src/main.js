@@ -6,6 +6,7 @@ import './permission' // permission
 import { useDict } from '@/utils/dict'
 import 'virtual:uno.css'
 import '@tdesign/uniapp/theme.less'
+import '@/static/scss/tdesign-theme.scss'
 
 export function createApp() {
   const app = createSSRApp(App)

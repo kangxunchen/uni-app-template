@@ -1,0 +1,6 @@
+// tdesign 主题覆盖文件
+
+// 在小程序根节点定义主题色 CSS 变量（覆盖 tdesign 默认值）
+page {
+  --td-brand-color: #00958a;
+}
