@@ -2,8 +2,8 @@
 
 uniapp 模板项目，用于快速启动 uniapp 项目，进行客制化开发。
 
-相关配置见：`/src/config.js`
-TDesign 自定义主题色 `src\static\scss\tdesign-theme.scss`
+- 相关配置见：`/src/config.js`
+- TDesign 自定义主题色 `src\static\scss\tdesign-theme.scss`
 
 ## 运行
 
