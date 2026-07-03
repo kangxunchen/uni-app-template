@@ -76,6 +76,6 @@ $uni-color-paragraph: #3f536e; // 文章段落颜色
 $uni-font-size-paragraph: 15px;
 
 // 通过 vite.config.js 的 css.preprocessorOptions.scss.additionalData 注入了 $static-base-url 变量
-@function set_background_image($path) {
+@function get_background_image($path) {
   @return url('#{$static-base-url}#{$path}');
 }

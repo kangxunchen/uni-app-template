@@ -1,6 +1,19 @@
 // global
-@use "./global.scss";
+@use './global.scss';
 // color-ui
-@use "@/static/scss/colorui.css";
+@use '@/static/scss/colorui.css';
 // iconfont
-@use "@/static/font/iconfont.css";
+@use '@/static/font/iconfont.css';
+
+/* 全局强制 box-sizing */
+view,
+text,
+image {
+  box-sizing: border-box;
+}
+// 仅对类名包含 font- 的元素设置 PingFangSC 字体，避免覆盖图标字体
+[class*='font-'] {
+  font-family:
+    PingFangSC,
+    PingFang SC;
+}
